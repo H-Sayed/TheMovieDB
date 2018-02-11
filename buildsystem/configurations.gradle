@@ -1,0 +1,14 @@
+ext {
+    android = [
+            buildToolsVersion: "27.0.1",
+            minSdkVersion    : 18,
+            targetSdkVersion : 27,
+            compileSdkVersion: 27
+    ]
+
+    endpoints = [
+            movie_db_end_point = "\"https://api.themoviedb.org/3/\"",
+            movie_db_token = "\"ced056a0e457f52577152cca976115d2\"",
+            movie_image_end_point = "\"https://image.tmdb.org/t/p/w500/\""
+    ]
+}

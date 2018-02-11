@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MovieList</string>
+
+    <string name="progress_message_loading">Loading</string>
+    <string name="menu_action_filter">Filter</string>
+    <string name="menu_action_refresh">Refresh</string>
+    <string name="generic_connection_error">Your internet seems to be off! enable it and try again</string>
+    <string name="generic_loading_failed">Unable to process your request</string>
+    <string name="generic_empty_movie_list">No Movies found</string>
+</resources>
