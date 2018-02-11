@@ -47,18 +47,15 @@ android {
 
 dependencies {
 
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     def commonDependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies
 
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation commonDependencies.supportAppCompatV7
     implementation commonDependencies.constraintLayout
     compile commonDependencies.vectorDrawables
     compile commonDependencies.supportV4
     compile commonDependencies.supportRecyclerView
-    compile commonDependencies.supportCardView
-    compile commonDependencies.supportDesign
     compile commonDependencies.glide
     compile commonDependencies.dagger
     annotationProcessor commonDependencies.daggerCompiler
@@ -67,14 +64,11 @@ dependencies {
     compile commonDependencies.butterKnife
     annotationProcessor commonDependencies.butterKnifeCompiler
 
-    compile commonDependencies.timberLogger
     compile commonDependencies.rxAndroid
     compile commonDependencies.rxJava2
     compile commonDependencies.retrofit2
     compile commonDependencies.retrofitConverter
     compile commonDependencies.retrofitRxAdapter
-    compile commonDependencies.rxBinding
-    compile commonDependencies.guavaAndroid
 
 
     testImplementation testDependencies.junit

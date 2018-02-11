@@ -14,17 +14,11 @@ ext {
     rxAndroid = '2.0.1'
     supportLibrary = '27.0.2'
     constraintLayout = '1.0.2'
-    okHttp = '3.8.0'
     retrofit2 = '2.3.0'
     glide = '4.2.0'
-
     dagger = '2.11'
     javaxAnnotation = '10.0-b28'
-
-
     butterKnife = '8.8.1'
-    timber = '4.5.1'
-    rxbinding = '2.1.0'
     googleGuava = '24.0-android'
 
     // Testing
@@ -45,8 +39,6 @@ ext {
             supportAppCompatV7 : "com.android.support:appcompat-v7:${supportLibrary}",
             vectorDrawables    : "com.android.support:animated-vector-drawable:${supportLibrary}",
             supportV4          : "com.android.support:support-v4:${supportLibrary}",
-            supportCardView    : "com.android.support:cardview-v7:${supportLibrary}",
-            supportDesign      : "com.android.support:design:${supportLibrary}",
             supportRecyclerView: "com.android.support:recyclerview-v7:${supportLibrary}",
             constraintLayout   : "com.android.support.constraint:constraint-layout:${constraintLayout}",
             retrofit2          : "com.squareup.retrofit2:retrofit:${retrofit2}",
@@ -57,11 +49,7 @@ ext {
             daggerCompiler     : "com.google.dagger:dagger-compiler:${dagger}",
             javaxAnnotation    : "org.glassfish:javax.annotation:${javaxAnnotation}",
             butterKnife        : "com.jakewharton:butterknife:${butterKnife}",
-            butterKnifeCompiler: "com.jakewharton:butterknife-compiler:${butterKnife}",
-            timberLogger       : "com.jakewharton.timber:timber:${timber}",
-            rxBinding          : "com.jakewharton.rxbinding2:rxbinding:${rxbinding}",
-            guavaAndroid       : "com.google.guava:guava:${googleGuava}"
-
+            butterKnifeCompiler: "com.jakewharton:butterknife-compiler:${butterKnife}"
 
     ]
 
