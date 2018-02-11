@@ -58,7 +58,7 @@ public class DetailActivity extends BaseActivity {
         mMovieTitle.setText(movie.getTitle());
         mMovieRating.setText(String.valueOf(movie.getVoteAverage()));
         mMovieDate.setText(movie.getReleaseDate());
-        mMovieGenre.setText(String.valueOf(movie.isAdult()));
+        mMovieGenre.setText(movie.isAdult() ? getString(R.string.genre_type_adults) : getString(R.string.genre_type_all));
         mMovieDesc.setText(movie.getOverview());
     }
 

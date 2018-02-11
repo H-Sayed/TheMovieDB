@@ -7,4 +7,6 @@
     <string name="generic_connection_error">Your internet seems to be off! enable it and try again</string>
     <string name="generic_loading_failed">Unable to process your request</string>
     <string name="generic_empty_movie_list">No Movies found</string>
+    <string name="genre_type_adults">Adults only</string>
+    <string name="genre_type_all">All Family members</string>
 </resources>
