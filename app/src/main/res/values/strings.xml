@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">MovieList</string>
-
     <string name="progress_message_loading">Loading</string>
     <string name="menu_action_filter">Filter</string>
     <string name="menu_action_refresh">Refresh</string>
