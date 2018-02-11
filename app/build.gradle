@@ -51,43 +51,42 @@ dependencies {
     def commonDependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies
 
+    implementation commonDependencies.spressoIdling
     implementation commonDependencies.supportAppCompatV7
     implementation commonDependencies.constraintLayout
-    compile commonDependencies.vectorDrawables
-    compile commonDependencies.supportV4
-    compile commonDependencies.supportRecyclerView
+    implementation commonDependencies.vectorDrawables
+    implementation commonDependencies.supportV4
+    implementation commonDependencies.supportRecyclerView
     compile commonDependencies.glide
     compile commonDependencies.dagger
+    implementation commonDependencies.guava
     annotationProcessor commonDependencies.daggerCompiler
     provided commonDependencies.javaxAnnotation
-
     compile commonDependencies.butterKnife
     annotationProcessor commonDependencies.butterKnifeCompiler
 
-    compile commonDependencies.rxAndroid
-    compile commonDependencies.rxJava2
-    compile commonDependencies.retrofit2
-    compile commonDependencies.retrofitConverter
-    compile commonDependencies.retrofitRxAdapter
+    implementation commonDependencies.rxAndroid
+    implementation commonDependencies.rxJava2
+    implementation commonDependencies.retrofit2
+    implementation commonDependencies.retrofitConverter
+    implementation commonDependencies.retrofitRxAdapter
 
 
     testImplementation testDependencies.junit
     testImplementation testDependencies.mockito
-    androidTestCompile testDependencies.supportAnnotation
-    androidTestCompile testDependencies.javaWriter
+    androidTestImplementation testDependencies.supportAnnotation
+    androidTestImplementation testDependencies.javaWriter
     androidTestImplementation testDependencies.testRunner
     androidTestImplementation testDependencies.testRunnerRules
+
     androidTestImplementation testDependencies.spresoCore
-    androidTestCompile testDependencies.dexMaker
-    androidTestCompile testDependencies.dexMakerMokito
-    androidTestCompile testDependencies.findBugs
+    androidTestImplementation testDependencies.spresoContrib
+    androidTestImplementation testDependencies.spressoIntents
+    androidTestImplementation testDependencies.spressoIdling
 
 
+    androidTestImplementation testDependencies.dexMaker
+    androidTestImplementation testDependencies.dexMakerMokito
+    androidTestImplementation testDependencies.findBugs
 
-    androidTestCompile testDependencies.spresoContrib, {
-        exclude group: 'com.android.support', module: 'support-annotations'
-        exclude group: 'com.android.support', module: 'support-v4'
-        exclude group: 'com.android.support', module: 'design'
-        exclude group: 'com.android.support', module: 'recyclerview-v7'
-    }
 }

@@ -27,6 +27,7 @@ ext {
     testRunnerRules = "rules:1.0.1"
     spressoCore = "espresso-core:3.0.1"
     spresoContrib = "espresso-contrib:2.2.2"
+    spressoIdling = "3.0.1"
     mockito = '2.8.9'
     supportAnnotation = '27.0.2'
     javaWriter = '2.5.1'
@@ -34,6 +35,8 @@ ext {
     findBugs = 'jsr305:3.0.2'
 
     commonDependencies = [
+            spressoIdling      : "com.android.support.test.espresso:espresso-idling-resource:${spressoIdling}",
+            guava              : "com.google.guava:guava:${googleGuava}",
             rxJava2            : "io.reactivex.rxjava2:rxjava:${rxJava2}",
             rxAndroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
             supportAppCompatV7 : "com.android.support:appcompat-v7:${supportLibrary}",
@@ -60,6 +63,8 @@ ext {
             testRunnerRules  : "com.android.support.test:${testRunnerRules}",
             spresoCore       : "com.android.support.test.espresso:${spressoCore}",
             spresoContrib    : "com.android.support.test.espresso:${spresoContrib}",
+            spressoIdling    : "com.android.support.test.espresso.idling:idling-concurrent:${spressoIdling}",
+            spressoIntents   : "com.android.support.test.espresso:espresso-intents:${spressoIdling}",
             supportAnnotation: "com.android.support:support-annotations:${supportAnnotation}",
             javaWriter       : "com.squareup:javawriter:${javaWriter}",
             dexMaker         : "com.google.dexmaker:dexmaker:${dexMaker}",
