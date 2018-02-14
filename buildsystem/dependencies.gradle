@@ -11,7 +11,7 @@ allprojects {
 
 ext {
     rxJava2 = '2.1.0'
-    rxAndroid = '2.0.1'
+    rxAndroid = '2.0.2'
     supportLibrary = '27.0.2'
     constraintLayout = '1.0.2'
     retrofit2 = '2.3.0'
@@ -25,17 +25,16 @@ ext {
     junit = '4.12'
     testRunner = "runner:1.0.1"
     testRunnerRules = "rules:1.0.1"
-    spressoCore = "espresso-core:3.0.1"
-    spresoContrib = "espresso-contrib:2.2.2"
-    spressoIdling = "3.0.1"
-    mockito = '2.8.9'
     supportAnnotation = '27.0.2'
-    javaWriter = '2.5.1'
-    dexMaker = "1.2"
+
+    mockito = '2.8.9'
+    powerMockApi = '1.7.0RC2'
+    powerMockCore = '1.7.3'
+    powerMockJunit = '1.7.0'
     findBugs = 'jsr305:3.0.2'
 
     commonDependencies = [
-            spressoIdling      : "com.android.support.test.espresso:espresso-idling-resource:${spressoIdling}",
+
             guava              : "com.google.guava:guava:${googleGuava}",
             rxJava2            : "io.reactivex.rxjava2:rxjava:${rxJava2}",
             rxAndroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
@@ -57,19 +56,18 @@ ext {
     ]
 
     commonTestDependencies = [
-            junit            : "junit:junit:${junit}",
-            mockito          : "org.mockito:mockito-core:${mockito}",
-            testRunner       : "com.android.support.test:${testRunner}",
-            testRunnerRules  : "com.android.support.test:${testRunnerRules}",
-            spresoCore       : "com.android.support.test.espresso:${spressoCore}",
-            spresoContrib    : "com.android.support.test.espresso:${spresoContrib}",
-            spressoIdling    : "com.android.support.test.espresso.idling:idling-concurrent:${spressoIdling}",
-            spressoIntents   : "com.android.support.test.espresso:espresso-intents:${spressoIdling}",
-            supportAnnotation: "com.android.support:support-annotations:${supportAnnotation}",
-            javaWriter       : "com.squareup:javawriter:${javaWriter}",
-            dexMaker         : "com.google.dexmaker:dexmaker:${dexMaker}",
-            dexMakerMokito   : "com.google.dexmaker:dexmaker-mockito:${dexMaker}",
-            findBugs         : "com.google.code.findbugs:${findBugs}"
+            junit             : "junit:junit:${junit}",
+            testRunner        : "com.android.support.test:${testRunner}",
+            testRunnerRules   : "com.android.support.test:${testRunnerRules}",
+            supportAnnotation : "com.android.support:support-annotations:${supportAnnotation}",
+            findBugs          : "com.google.code.findbugs:${findBugs}",
+            mocitoCore        : "org.mockito:mockito-core:${mockito}",
+            powerMockCore     : "org.powermock:powermock-core:${powerMockCore}",
+            powerMockJunit    : "org.powermock:powermock-module-junit4:${powerMockCore}",
+            powerMockJunitRule: "org.powermock:powermock-module-junit4-rule:${powerMockJunit}",
+            powerMockApi      : "org.powermock:powermock-api-mockito2:${powerMockApi}",
+
+
     ]
 
 

@@ -40,12 +40,13 @@ public class DetailActivity extends BaseActivity {
     protected void onViewReady(Bundle savedInstanceState, Intent intent) {
         super.onViewReady(savedInstanceState, intent);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mMoviePoster.setTransitionName("cakeImageAnimation");
+            mMoviePoster.setTransitionName("movieImageAnimation");
         }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setMovie();
     }
 
+    // load the movie details
     private void setMovie() {
         Movie movie = getIntent().getExtras().getParcelable(MOVIE);
         Glide.with(mMoviePoster).setDefaultRequestOptions(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL)).load(BuildConfig.IMG_DIR + movie.getPosterPath())

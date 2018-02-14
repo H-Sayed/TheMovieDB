@@ -1,9 +1,7 @@
 package moviedb.careem.com.themovedb.di.module;
 
 import android.content.Context;
-
 import java.util.concurrent.TimeUnit;
-
 import javax.inject.Named;
 import javax.inject.Singleton;
 import dagger.Module;
@@ -26,6 +24,10 @@ public class ApplicationModule {
         mContext = context;
     }
 
+    /**
+     * builder for  json conversion
+     * @return Gson factory
+     */
     @Singleton
     @Provides
     GsonConverterFactory provideGsonConverterFactory() {
@@ -42,17 +44,24 @@ public class ApplicationModule {
                 .build();
     }
 
+    /**
+     * we can provide different http client with different criteria
+     * @return Http client with 60 seconds timeout for requests
+     */
     @Singleton
     @Provides
     @Named("ok-2")
     OkHttpClient provideOkHttpClient2() {
-
         return new OkHttpClient.Builder()
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
                 .build();
     }
 
+    /**
+     * build synchronous observables which is not  operating on any scheduler by default
+     * @return RAadapter
+     */
     @Singleton
     @Provides
     RxJava2CallAdapterFactory provideCallAdapter() {
@@ -60,23 +69,39 @@ public class ApplicationModule {
     }
 
 
+    /**
+     * build retrofit client based on the provided builders
+     * @param client OkHttp client
+     * @param converterFactory Gson factory
+     * @param adapterFactory adapterFactory
+     * @param url server url
+     * @return Retrofit client
+     */
     @Singleton
     @Provides
-    Retrofit provideRetrofit(@Named("ok-2") OkHttpClient client, GsonConverterFactory converterFactory, RxJava2CallAdapterFactory adapterFactory) {
+    Retrofit provideRetrofit(@Named("ok-2") OkHttpClient client, GsonConverterFactory converterFactory, RxJava2CallAdapterFactory adapterFactory,String url) {
         return new Retrofit.Builder()
-                .baseUrl(getBaseUrl())
+                .baseUrl(url)
                 .addConverterFactory(converterFactory)
                 .addCallAdapterFactory(adapterFactory)
                 .client(client)
                 .build();
     }
 
+    /**
+     * providing the application context
+     * @return App context
+     */
     @Provides
     @Singleton
     Context provideContext() {
         return mContext;
     }
 
+    /**
+     * return moviedb url used in loading movies
+     * @return server url
+     */
     @Provides
     @Singleton
     String getBaseUrl() {

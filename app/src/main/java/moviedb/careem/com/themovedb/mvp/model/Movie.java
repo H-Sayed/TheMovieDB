@@ -2,10 +2,8 @@ package moviedb.careem.com.themovedb.mvp.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 /**
@@ -103,9 +101,6 @@ public class Movie implements Parcelable {
         }
     };
 
-    public int getVoteCount() {
-        return voteCount;
-    }
     public int getId() {
         return id;
     }
@@ -118,17 +113,11 @@ public class Movie implements Parcelable {
     public String getTitle() {
         return title;
     }
-    public double getPopularity() {
-        return popularity;
-    }
     public String getPosterPath() {
         return posterPath;
     }
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
-    }
-    public String getOriginalLanguage() {
-        return originalLanguage;
     }
     public String getOverview() {
         return overview;
@@ -146,14 +135,6 @@ public class Movie implements Parcelable {
         return 0;
     }
 
-    public void setVoteCount(int voteCount) {
-        this.voteCount = voteCount;
-    }
-
-    public void setVideo(boolean video) {
-        this.video = video;
-    }
-
     public void setVoteAverage(float voteAverage) {
         this.voteAverage = voteAverage;
     }
@@ -162,13 +143,7 @@ public class Movie implements Parcelable {
         this.title = title;
     }
 
-    public void setPopularity(double popularity) {
-        this.popularity = popularity;
-    }
 
-    public void setOriginalLanguage(String originalLanguage) {
-        this.originalLanguage = originalLanguage;
-    }
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {

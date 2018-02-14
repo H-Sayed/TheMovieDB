@@ -1,4 +1,4 @@
-package moviedb.careem.com.themovedb.api;
+package moviedb.careem.com.themovedb.data.remote;
 
 import java.util.Map;
 
@@ -9,6 +9,8 @@ import retrofit2.http.QueryMap;
 
 /**
  * Created by Hassan Sayed on 2/11/2018.
+ * API service which hits the moviedb apis to get the movies by
+ * filter or list all movies
  */
 
 public interface MoviesApiService {

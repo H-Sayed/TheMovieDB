@@ -1,9 +1,10 @@
-package moviedb.careem.com.themovedb.mvp.model.local;
+package moviedb.careem.com.themovedb.data.local;
 
 import android.provider.BaseColumns;
 
 /**
  * Created by Hassan Sayed on 2/11/2018.
+ * Contract class for the movies table
  */
 
 class MoviePersistenceContract {
@@ -17,9 +18,10 @@ class MoviePersistenceContract {
         static final String COLUMN_NAME_ENTRY_ID = "entryid";
         static final String COLUMN_NAME_TITLE = "title";
         static final String COLUMN_NAME_DESCRIPTION = "overview";
-        static final String COLUMN_NAME_RELEASE_DATE = "releasedate";
+        static final String COLUMN_NAME_RELEASE_DATE = "release_date";
         static final String COLUMN_NAME_RATING = "rating";
         static final String COLUMN_NAME_ADULT = "adult";
         static final String COLUMN_NAME_IMAGE = "image";
+        static final String COLUMN_NAME_CREATED_AT = "created_at";
     }
 }

@@ -14,6 +14,9 @@ import moviedb.careem.com.themovedb.di.components.ApplicationComponent;
 
 /**
  * Created by Hassan sayed on 2/11/2018.
+ * base activity class where every child will inherit
+ * Butterknife is used for views injections .
+ * any child can resolve the dagger dependency on his own context
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -63,6 +66,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected ApplicationComponent getApplicationComponent() {
         return ((MovieDbApplication) getApplication()).getApplicationComponent();
     }
+
 
     protected abstract int getContentView();
 }

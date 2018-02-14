@@ -6,6 +6,7 @@ import moviedb.careem.com.themovedb.mvp.model.Movie;
 
 /**
  * Created by Hassan Sayed on 2/11/2018.
+ * view for movies view
  */
 
 public interface MainView extends BaseView {

@@ -2,7 +2,7 @@ package moviedb.careem.com.themovedb.di.module;
 
 import dagger.Module;
 import dagger.Provides;
-import moviedb.careem.com.themovedb.api.MoviesApiService;
+import moviedb.careem.com.themovedb.data.remote.MoviesApiService;
 import moviedb.careem.com.themovedb.di.scope.PerActivity;
 import moviedb.careem.com.themovedb.mvp.view.MainView;
 import retrofit2.Retrofit;

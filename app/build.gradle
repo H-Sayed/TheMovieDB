@@ -26,15 +26,6 @@ android {
         }
     }
 
-    packagingOptions {
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/license.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/notice.txt'
-        exclude 'META-INF/ASL2.0'
-    }
 
     compileOptions {
         sourceCompatibility 1.8
@@ -51,7 +42,6 @@ dependencies {
     def commonDependencies = rootProject.ext.commonDependencies
     def testDependencies = rootProject.ext.commonTestDependencies
 
-    implementation commonDependencies.spressoIdling
     implementation commonDependencies.supportAppCompatV7
     implementation commonDependencies.constraintLayout
     implementation commonDependencies.vectorDrawables
@@ -64,7 +54,6 @@ dependencies {
     provided commonDependencies.javaxAnnotation
     compile commonDependencies.butterKnife
     annotationProcessor commonDependencies.butterKnifeCompiler
-
     implementation commonDependencies.rxAndroid
     implementation commonDependencies.rxJava2
     implementation commonDependencies.retrofit2
@@ -73,20 +62,15 @@ dependencies {
 
 
     testImplementation testDependencies.junit
-    testImplementation testDependencies.mockito
     androidTestImplementation testDependencies.supportAnnotation
-    androidTestImplementation testDependencies.javaWriter
     androidTestImplementation testDependencies.testRunner
     androidTestImplementation testDependencies.testRunnerRules
-
-    androidTestImplementation testDependencies.spresoCore
-    androidTestImplementation testDependencies.spresoContrib
-    androidTestImplementation testDependencies.spressoIntents
-    androidTestImplementation testDependencies.spressoIdling
-
-
-    androidTestImplementation testDependencies.dexMaker
-    androidTestImplementation testDependencies.dexMakerMokito
     androidTestImplementation testDependencies.findBugs
+
+    testCompile testDependencies.mocitoCore
+    testCompile testDependencies.powerMockCore
+    testCompile testDependencies.powerMockJunit
+    testCompile testDependencies.powerMockJunitRule
+    testCompile testDependencies.powerMockApi
 
 }

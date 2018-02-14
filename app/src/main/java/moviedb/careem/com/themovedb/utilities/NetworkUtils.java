@@ -10,6 +10,11 @@ import android.net.NetworkInfo;
 
 public class NetworkUtils {
 
+    /**
+     * method used to check if internet is available of not
+     * @param context app context
+     * @return isActive
+     */
     public static boolean isNetAvailable(Context context) {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

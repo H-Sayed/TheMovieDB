@@ -1,13 +1,14 @@
 package moviedb.careem.com.themovedb.application;
 
 import android.app.Application;
-
 import moviedb.careem.com.themovedb.di.components.ApplicationComponent;
 import moviedb.careem.com.themovedb.di.components.DaggerApplicationComponent;
 import moviedb.careem.com.themovedb.di.module.ApplicationModule;
 
 /**
  * Created by Hassan Sayed on 2/11/2018.
+ *  main application class with is initialized with every app run
+ *  Dagger component for the application is loaded while creation
  */
 
 public class MovieDbApplication extends Application{

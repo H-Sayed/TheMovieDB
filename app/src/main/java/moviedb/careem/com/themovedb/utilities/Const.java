@@ -2,6 +2,7 @@ package moviedb.careem.com.themovedb.utilities;
 
 /**
  * Created by Hassan Sayed on 2/11/2018.
+ * Constants class with the keys used as request parameters
  */
 
 public class Const {

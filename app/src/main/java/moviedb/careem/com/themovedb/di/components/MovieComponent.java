@@ -7,6 +7,8 @@ import moviedb.careem.com.themovedb.di.scope.PerActivity;
 
 /**
  * Created by Hassan Sayed on 2/11/2018.
+ * Component used to inject the main screen activity
+ * depending on the application component
  */
 
 @PerActivity
